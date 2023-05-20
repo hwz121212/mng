@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{791642ed-9e59-4f42-927b-3562f869d9c1}</ProjectGuid>
+    <ProjectGuid>{BD2B3445-41EE-4F2E-A5DA-86F5A9BA3B0B}</ProjectGuid>
     <Keyword>Linux</Keyword>
     <RootNamespace>linux_test</RootNamespace>
     <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
