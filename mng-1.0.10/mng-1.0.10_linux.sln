@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0_lib", "0_lib", "{1C2C187C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_dll", "1_dll", "{5A138E35-6BAF-4705-A20F-8D43834A06F4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmng", "thirdparty\mng-1.0.10\libmng_linux.vcxproj", "{B87B277E-6A52-473F-986F-A5521411990A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -33,6 +35,10 @@ Global
 		{CE378188-FDBB-4EF5-A62D-20150CD4EEE3}.Debug|x64.Build.0 = Debug|x64
 		{CE378188-FDBB-4EF5-A62D-20150CD4EEE3}.Release|x64.ActiveCfg = Release|x64
 		{CE378188-FDBB-4EF5-A62D-20150CD4EEE3}.Release|x64.Build.0 = Release|x64
+		{B87B277E-6A52-473F-986F-A5521411990A}.Debug|x64.ActiveCfg = Debug|x64
+		{B87B277E-6A52-473F-986F-A5521411990A}.Debug|x64.Build.0 = Debug|x64
+		{B87B277E-6A52-473F-986F-A5521411990A}.Release|x64.ActiveCfg = Release|x64
+		{B87B277E-6A52-473F-986F-A5521411990A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{CE378188-FDBB-4EF5-A62D-20150CD4EEE3} = {5A138E35-6BAF-4705-A20F-8D43834A06F4}
 		{1C2C187C-B9EF-4E21-A0E5-768595FA93C0} = {EBBBC5AB-E662-45E5-BA81-FB445F6B829F}
 		{5A138E35-6BAF-4705-A20F-8D43834A06F4} = {EBBBC5AB-E662-45E5-BA81-FB445F6B829F}
+		{B87B277E-6A52-473F-986F-A5521411990A} = {1C2C187C-B9EF-4E21-A0E5-768595FA93C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5806D430-DEB4-4E2B-8838-C80B410D7661}
