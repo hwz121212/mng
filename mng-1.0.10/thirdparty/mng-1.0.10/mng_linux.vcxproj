@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\libmng.h" />
+    <ClInclude Include="include\libmng_chunks.h" />
+    <ClInclude Include="include\libmng_chunk_descr.h" />
+    <ClInclude Include="include\libmng_chunk_io.h" />
+    <ClInclude Include="include\libmng_chunk_prc.h" />
+    <ClInclude Include="include\libmng_cms.h" />
+    <ClInclude Include="include\libmng_conf.h" />
+    <ClInclude Include="include\libmng_data.h" />
+    <ClInclude Include="include\libmng_display.h" />
+    <ClInclude Include="include\libmng_dither.h" />
+    <ClInclude Include="include\libmng_error.h" />
+    <ClInclude Include="include\libmng_filter.h" />
+    <ClInclude Include="include\libmng_jpeg.h" />
+    <ClInclude Include="include\libmng_memory.h" />
+    <ClInclude Include="include\libmng_objects.h" />
+    <ClInclude Include="include\libmng_object_prc.h" />
+    <ClInclude Include="include\libmng_pixels.h" />
+    <ClInclude Include="include\libmng_read.h" />
+    <ClInclude Include="include\libmng_trace.h" />
+    <ClInclude Include="include\libmng_types.h" />
+    <ClInclude Include="include\libmng_write.h" />
+    <ClInclude Include="include\libmng_zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\libmng_callback_xs.c" />
+    <ClCompile Include="src\libmng_chunk_descr.c" />
+    <ClCompile Include="src\libmng_chunk_io.c" />
+    <ClCompile Include="src\libmng_chunk_prc.c" />
+    <ClCompile Include="src\libmng_chunk_xs.c" />
+    <ClCompile Include="src\libmng_cms.c" />
+    <ClCompile Include="src\libmng_display.c" />
+    <ClCompile Include="src\libmng_dither.c" />
+    <ClCompile Include="src\libmng_error.c" />
+    <ClCompile Include="src\libmng_filter.c" />
+    <ClCompile Include="src\libmng_hlapi.c" />
+    <ClCompile Include="src\libmng_jpeg.c" />
+    <ClCompile Include="src\libmng_object_prc.c" />
+    <ClCompile Include="src\libmng_pixels.c" />
+    <ClCompile Include="src\libmng_prop_xs.c" />
+    <ClCompile Include="src\libmng_read.c" />
+    <ClCompile Include="src\libmng_trace.c" />
+    <ClCompile Include="src\libmng_write.c" />
+    <ClCompile Include="src\libmng_zlib.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3F9014A8-B175-4173-A879-146EB0782F33}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>linux_test</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+    <ProjectName>mng</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)thirdparty\zlib-1.2.12\include;$(SolutionDir)thirdparty\jpeg-9e\include;/root/projects/libzlib/include;/root/projects/libjpeg/include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>zlib;jpeg</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)thirdparty\zlib-1.2.12\include;$(SolutionDir)thirdparty\jpeg-9e\include;/root/projects/libzlib/include;/root/projects/libjpeg/include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>zlib;jpeg</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
